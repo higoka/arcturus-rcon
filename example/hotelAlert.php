@@ -11,11 +11,3 @@ $result = socket_read($socket, 2048);
 
 socket_close($socket);
 exit($result);
-
-# $hotelAlert('message', 'url') // optional url
-# $disconnect(userId)
-# $sendCredit(userId, amount)
-# $sendPixel(userId, amount)
-# $sendPoint(userId, amount)
-# $sendBadge(userId, badgeName)
-# $sendGift(userId, itemId, 'message') // optional message

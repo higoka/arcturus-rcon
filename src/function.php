@@ -29,6 +29,16 @@ $userAlert = function (int $userId, string $message): string {
     ]);
 };
 
+$mute = function (int $userId, int $duration): string {
+    return json_encode([
+        'key' => 'muteuser',
+        'data' => [
+            'user_id' => $userId,
+            'duration' => $duration,
+        ],
+    ]);
+};
+
 $disconnect = function (int $userId): string {
     return json_encode([
         'key' => 'disconnect',

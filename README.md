@@ -16,6 +16,9 @@ $staffAlert('message')
 # Send a alert to a user.
 $userAlert(userId, 'message')
 
+# Mute a user.
+$mute(userId, duration)
+
 # Disconnect a user.
 $disconnect(userId)
 

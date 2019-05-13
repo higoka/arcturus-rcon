@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Send a alert to all online users.
+ *
+ * @param string $message
+ * @param string $url
+ * @return string
+ */
 $hotelAlert = function (string $message, string $url = ''): string {
     return json_encode([
         'key' => 'hotelalert',
@@ -10,6 +17,12 @@ $hotelAlert = function (string $message, string $url = ''): string {
     ]);
 };
 
+/**
+ * Send a alert to all online staffs.
+ *
+ * @param string $message
+ * @return string
+ */
 $staffAlert = function (string $message): string {
     return json_encode([
         'key' => 'staffalert',
@@ -19,6 +32,13 @@ $staffAlert = function (string $message): string {
     ]);
 };
 
+/**
+ * Send a alert to a online user.
+ *
+ * @param int $userId
+ * @param string $message
+ * @return string
+ */
 $userAlert = function (int $userId, string $message): string {
     return json_encode([
         'key' => 'alertuser',
@@ -29,6 +49,13 @@ $userAlert = function (int $userId, string $message): string {
     ]);
 };
 
+/**
+ * Mute a online user.
+ *
+ * @param int $userId
+ * @param int $duration
+ * @return string
+ */
 $mute = function (int $userId, int $duration): string {
     return json_encode([
         'key' => 'muteuser',
@@ -39,6 +66,12 @@ $mute = function (int $userId, int $duration): string {
     ]);
 };
 
+/**
+ * Disconnect a online user.
+ *
+ * @param int $userId
+ * @return string
+ */
 $disconnect = function (int $userId): string {
     return json_encode([
         'key' => 'disconnect',
@@ -48,6 +81,13 @@ $disconnect = function (int $userId): string {
     ]);
 };
 
+/**
+ * Send credits to a online user.
+ *
+ * @param int $userId
+ * @param int $amount
+ * @return string
+ */
 $sendCredit = function (int $userId, int $amount): string {
     return json_encode([
         'key' => 'givecredits',
@@ -58,6 +98,13 @@ $sendCredit = function (int $userId, int $amount): string {
     ]);
 };
 
+/**
+ * Send pixels to a online user.
+ *
+ * @param int $userId
+ * @param int $amount
+ * @return string
+ */
 $sendPixel = function (int $userId, int $amount): string {
     return json_encode([
         'key' => 'givepixels',
@@ -68,6 +115,13 @@ $sendPixel = function (int $userId, int $amount): string {
     ]);
 };
 
+/**
+ * Send points to a online user.
+ *
+ * @param int $userId
+ * @param int $amount
+ * @return string
+ */
 $sendPoint = function (int $userId, int $amount): string {
     return json_encode([
         'key' => 'givepoints',
@@ -79,6 +133,13 @@ $sendPoint = function (int $userId, int $amount): string {
     ]);
 };
 
+/**
+ * Send a badge to a online user.
+ *
+ * @param int $userId
+ * @param string $badgeName
+ * @return string
+ */
 $sendBadge = function (int $userId, string $badgeName): string {
     return json_encode([
         'key' => 'givebadge',
@@ -89,6 +150,14 @@ $sendBadge = function (int $userId, string $badgeName): string {
     ]);
 };
 
+/**
+ * Send a gift to a online user.
+ *
+ * @param int $userId
+ * @param int $itemId
+ * @param string $message
+ * @return string
+ */
 $sendGift = function (int $userId, int $itemId, string $message = ''): string {
     return json_encode([
         'key' => 'sendgift',

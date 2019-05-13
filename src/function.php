@@ -10,6 +10,25 @@ $hotelAlert = function (string $message, string $url = ''): string {
     ]);
 };
 
+$staffAlert = function (string $message): string {
+    return json_encode([
+        'key' => 'staffalert',
+        'data' => [
+            'message' => $message,
+        ],
+    ]);
+};
+
+$userAlert = function (int $userId, string $message): string {
+    return json_encode([
+        'key' => 'alertuser',
+        'data' => [
+            'user_id' => $userId,
+            'message' => $message,
+        ],
+    ]);
+};
+
 $disconnect = function (int $userId): string {
     return json_encode([
         'key' => 'disconnect',

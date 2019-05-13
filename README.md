@@ -1,14 +1,20 @@
 # arcturus-rcon
-A simple PHP wrapper for Arcturus Emulator RCON. Perfect for implementing in your cms. 
+A simple PHP wrapper for Arcturus Emulator RCON. Perfect for implementing in your cms.
 
 ### Installation
-Just download and put it in your cms. 
+Just download and put it in your cms.
 Edit line 7 in index.php with the same RCON host and port which arcturus uses.
 
 ### Commands
 ```php
-# Send a hotelAlert. Optionally with an URL.
+# Send a alert to all users. Optionally with an URL.
 $hotelAlert('message', 'url')
+
+# Send a alert to all staffs.
+$staffAlert('message')
+
+# Send a alert to a user.
+$userAlert(userId, 'message')
 
 # Disconnect a user.
 $disconnect(userId)

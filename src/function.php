@@ -19,32 +19,32 @@ $disconnect = function (int $userId): string {
     ]);
 };
 
-$sendCredit = function (int $userId, int $credit): string {
+$sendCredit = function (int $userId, int $amount): string {
     return json_encode([
         'key' => 'givecredits',
         'data' => [
             'user_id' => $userId,
-            'credits' => $credit,
+            'credits' => $amount,
         ],
     ]);
 };
 
-$sendPixel = function (int $userId, int $pixel): string {
+$sendPixel = function (int $userId, int $amount): string {
     return json_encode([
         'key' => 'givepixels',
         'data' => [
             'user_id' => $userId,
-            'pixels' => $pixel,
+            'pixels' => $amount,
         ],
     ]);
 };
 
-$sendPoint = function (int $userId, int $point): string {
+$sendPoint = function (int $userId, int $amount): string {
     return json_encode([
         'key' => 'givepoints',
         'data' => [
             'user_id' => $userId,
-            'points' => $point,
+            'points' => $amount,
             'type' => 5,
         ],
     ]);

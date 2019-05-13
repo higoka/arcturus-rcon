@@ -1,5 +1,5 @@
 # arcturus-rcon
-A simple PHP wrapper for Arcturus Emulator RCON.
+A simple PHP wrapper for Arcturus Emulator RCON. Perfect for implementing in your cms. 
 
 ### Installation
 Just download and put it in your cms. 

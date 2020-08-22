@@ -1,3 +1,5 @@
+# WARNING: THIS PROJECT IS DEPRECATED. USE [THIS](https://github.com/higoka/habbo-rcon-client) INSTEAD!
+
 # arcturus-rcon
 A simple PHP wrapper for Arcturus Emulator RCON. Perfect for implementing in your cms.
 
